@@ -15,7 +15,7 @@ body {
 }
 
 #image-container {
-    width: 33%; /* Adjust the width of the image container */
+    width: 22%; /* Reduced width of the image container */
 }
 
 #image-container img {
@@ -24,7 +24,7 @@ body {
 }
 
 #question-container {
-    width: 67%; /* Adjust the width of the question container */
+    width: 78%; /* Increased width to fill the remaining space */
     padding-left: 20px;
 }
 
