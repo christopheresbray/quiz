@@ -8,9 +8,9 @@ body {
 #header-container {
     align-items: center;
     justify-content: flex-start;
-    max-width: calc(100vw - 40px); /* Reduced overall width to account for padding */
+    max-width: calc(100vw - 20px); /* Reduced overall width to account for padding */
     margin: 0 auto; /* Centered horizontally */
-    padding: 20px; /* Added padding around the container */
+    padding: 10px; /* Added padding around the container */
     box-sizing: border-box;
 }
 
@@ -20,7 +20,6 @@ body {
 }
 
 #image-container img {
-    width: 100%;
     height: auto;
 }
 
