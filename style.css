@@ -67,11 +67,12 @@ body {
 }
 
 #answers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px; /* Adjust as necessary */
+    margin: 0 auto;
     gap: 10px;
-    margin: 0 auto; /* Centering the grid */
-    max-width: 500px; /* Set a max width for the answer grid */
 }
 
 .answer {
@@ -85,17 +86,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1;
-    font-size: 5vw;
+    width: calc(50% - 12px); /* Adjust width for 2 columns layout */
+    height: 100px; /* Fixed height */
+    padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
     text-shadow: 1px 1px 2px black;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.answer:hover, .answer:focus {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to overflowed text */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 #answer1 { background-color: red; }
@@ -130,5 +129,8 @@ body {
 
     #stars span {
         font-size: 6vw;
+    }
+    .answer {
+        font-size: 4vw; /* Smaller font size for smaller screens */
     }
 }
