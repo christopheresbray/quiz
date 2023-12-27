@@ -17,13 +17,8 @@ body {
 }
 
 #question {
-    font-size: 6vw; /* Increased font size for question */
+    font-size: 6vw;
     font-weight: bold;
-    color: black;
-}
-
-#score {
-    font-size: 5vw; /* Increased font size for score */
     color: black;
 }
 
@@ -34,7 +29,7 @@ body {
     gap: 10px;
     padding: 10px;
     box-sizing: border-box;
-    position: relative; /* Set relative positioning for feedback */
+    position: relative;
 }
 
 .answer {
@@ -47,10 +42,10 @@ body {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
-    font-size: 5vw; /* Responsive font size */
+    font-size: 5vw;
     box-sizing: border-box;
     text-align: center;
-    text-shadow: 1px 1px 2px black; /* Text shadow for readability */
+    text-shadow: 1px 1px 2px black;
 }
 
 #answer1 { background-color: red; }
@@ -58,38 +53,20 @@ body {
 #answer3 { background-color: green; }
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
-.feedback {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 48vw;
-    height: 48vw;
+#stars {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vw;
-    color: white;
-    text-align: center;
-    z-index: 100;
-    background-color: green; /* Default background */
-}
-
-.correct { background-color: green; }
-.incorrect { background-color: red; }
-
-@media only screen and (max-width: 600px) {
-    #question, #score, .answer { font-size: 8vw; }
-    .feedback {
-        width: 96vw;
-        height: 48vw;
-    }
-}
-#stars {
-    font-size: 24px; /* Adjust size as needed */
     margin: 10px 0;
 }
 
 #stars span {
-    margin-right: 5px;
+    font-size: 10vw;
+    margin: 0 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    #stars span {
+        font-size: 20vw;
+    }
 }
