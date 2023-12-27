@@ -6,7 +6,6 @@ body {
 }
 
 #header-container {
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     max-width: calc(100vw - 40px); /* Reduced overall width to account for padding */
