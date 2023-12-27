@@ -21,9 +21,20 @@ let questions = [
     { question: "What should you do before buying something expensive?", answers: ["Throw away your money", "Think carefully and decide if you really need it", "Buy it immediately", "Ask a friend to buy it"], correct: 1 }
 ];
 
+// Function to shuffle questions
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+}
+
 let totalQuestions = questions.length;
 let currentQuestionIndex = 0;
 let currentScore = 0;
+
+// Shuffle questions at the start
+shuffleArray(questions);
 
 function displayQuestion() {
     let question = questions[currentQuestionIndex];
