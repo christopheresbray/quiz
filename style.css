@@ -61,12 +61,12 @@ body {
 }
 
 #stars span {
-    font-size: 10vw;
+    font-size: 8vw; /* Adjusted font size */
     margin: 0 2px;
 }
 
 @media only screen and (max-width: 600px) {
     #stars span {
-        font-size: 20vw;
+        font-size: 16vw; /* Adjusted for smaller screens */
     }
 }
