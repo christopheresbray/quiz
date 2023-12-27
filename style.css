@@ -37,6 +37,7 @@ body {
     padding: 15px; /* Inner spacing */
     text-align: center;
     height: 300px;
+    width: 100vw;
     margin-bottom: 20px; /* Space below the question box */
 }
 
