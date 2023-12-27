@@ -21,66 +21,47 @@ let questions = [
     { question: "What should you do before buying something expensive?", answers: ["Throw away your money", "Think carefully and decide if you really need it", "Buy it immediately", "Ask a friend to buy it"], correct: 1 }
 ];
 
+let totalQuestions = questions.length;
 let currentQuestionIndex = 0;
-let correctAnswers = 0;
-let attemptedQuestions = 0;
+let currentScore = 0;
 
 function displayQuestion() {
     let question = questions[currentQuestionIndex];
     document.getElementById("question").innerText = question.question;
     question.answers.forEach((answer, index) => {
         document.getElementById("answer" + (index + 1)).innerText = answer;
-        document.getElementById("answer" + (index + 1)).classList.remove("inactive");
     });
+    updateStars();
     updateScore();
 }
 
 function selectAnswer(index) {
-    let isCorrect = index === questions[currentQuestionIndex].correct;
-    attemptedQuestions++;
-    correctAnswers += isCorrect ? 1 : 0;
-    
-    // Update answer colors
-    for (let i = 0; i < 4; i++) {
-        document.getElementById("answer" + (i + 1)).classList.add("inactive");
-    }
-
-    showFeedback(isCorrect);
-    setTimeout(() => {
-        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-        displayQuestion();
-        resetFeedback();
-    }, 2000); // Wait for 2 seconds before the next question
-}
-
-function showFeedback(isCorrect) {
-    let feedbackDiv = document.createElement("div");
-    feedbackDiv.classList.add("feedback");
-
-    if (isCorrect) {
-        feedbackDiv.classList.add("correct");
-        feedbackDiv.innerHTML = "Correct! <div id='firework-graphic'>🎆</div>";
+    if (index === questions[currentQuestionIndex].correct) {
+        if (currentScore < totalQuestions) {
+            currentScore++;
+        }
     } else {
-        feedbackDiv.classList.add("incorrect");
-        feedbackDiv.innerHTML = "Incorrect <div id='sad-face'>😔</div>";
+        if (currentScore > 0) {
+            currentScore--;
+        }
     }
-
-    document.body.appendChild(feedbackDiv);
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+    displayQuestion();
 }
 
-function resetFeedback() {
-    let feedbackElements = document.querySelectorAll(".feedback");
-    feedbackElements.forEach(element => element.remove());
-    document.querySelectorAll(".answer").forEach(answer => {
-        answer.classList.remove("inactive");
-    });
+function updateStars() {
+    let starContainer = document.getElementById("stars");
+    starContainer.innerHTML = ""; // Clear previous stars
+
+    for (let i = 0; i < totalQuestions; i++) {
+        let star = document.createElement("span");
+        star.textContent = i < currentScore ? "⭐" : "☆"; // Filled star for correct answers, empty for remaining
+        starContainer.appendChild(star);
+    }
 }
 
 function updateScore() {
-    let score = 0;
-    if (attemptedQuestions > 0) {
-        score = Math.round((correctAnswers / attemptedQuestions) * 100);
-    }
+    let score = Math.round((currentScore / totalQuestions) * 100);
     document.getElementById("score").innerText = "Score: " + score + "%";
 }
 
