@@ -98,7 +98,7 @@ body {
     font-size: 5vw; /* Adjust font size for responsive text */
     padding-top: 100%; /* Set padding-top to create square aspect ratio */
     line-height: 1.2; /* Adjust line-height for vertical centering */
-}}
+}
 
 #answer1 { background-color: red; }
 #answer2 { background-color: blue; }
