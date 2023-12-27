@@ -96,8 +96,7 @@ body {
     text-align: center;
     text-shadow: 1px 1px 2px black;
     overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis to overflowed text */
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: normal; /* allow text wrapping */
     font-size: 5vw; /* Adjust font size for responsive text */
     padding-top: 10%; /* Set padding-top to create square aspect ratio */
     line-height: 1.2; /* Adjust line-height for vertical centering */
