@@ -87,14 +87,14 @@ body {
     justify-content: center;
     align-items: center;
     width: calc(50% - 12px); /* Adjust width for 2 columns layout */
-    min-height: 100px; /* Minimum height to allow multiple lines */
+    height: 100px; /* Fixed height */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
     text-shadow: 1px 1px 2px black;
     overflow: hidden; /* Hide overflow */
     text-overflow: ellipsis; /* Add ellipsis to overflowed text */
-    white-space: normal; /* Allow text to wrap */
+    white-space: nowrap; /* Prevent text wrapping */
     font-size: 5vw; /* Adjust font size for responsive text */
 }
 
