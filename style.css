@@ -15,12 +15,13 @@ body {
 }
 
 #image-container {
-    width: 22%;
-    height: 22%;
+    width: 150px;
+    height: 150px;
 }
 
 #image-container img {
-    height: auto;
+    width: auto;
+    height: 150px;
 }
 
 #question-container {
@@ -53,7 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f9f9f9; /* Light background color */
-    border: 2px solid #ddd;
+    border: 5px solid #ddd;
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 10px; /* Inner spacing */
@@ -63,7 +64,7 @@ body {
 }
 
 #quiz-container {
-    max-width: calc(100vw - 40px); /* Adjusted width for consistent padding */
+    max-width: 90vw; /* Adjusted width for consistent padding */
     margin: auto;
     padding: 20px; /* Additional padding on the right */
     box-sizing: border-box;
