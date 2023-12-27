@@ -24,9 +24,10 @@ body {
 }
 
 #question-container {
-    width: 100vw;
-    height: 300px;
-    padding-left: 10px;
+    max-width: calc(100vw - 40px); /* Adjusted width for consistent padding */
+    margin: auto;
+    padding: 20px; /* Additional padding on the right */
+    box-sizing: border-box;
 }
 
 #question-header {
