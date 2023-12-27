@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', sans-serif; /* Changed to Trebuchet MS */
+    font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
@@ -9,13 +9,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 100vw;
-    padding: 20px;
+    max-width: calc(100vw - 40px); /* Reduced overall width to account for padding */
+    margin: 0 auto; /* Centered horizontally */
+    padding: 20px; /* Added padding around the container */
     box-sizing: border-box;
 }
 
 #image-container {
-    width: 22%; /* Adjust as necessary */
+    width: 22%;
 }
 
 #image-container img {
@@ -39,16 +40,15 @@ body {
 }
 
 #quiz-container {
-    max-width: 100vw;
+    max-width: calc(100vw - 40px); /* Adjusted width for consistent padding */
     margin: auto;
-    padding: 20px;
+    padding: 20px; /* Additional padding on the right */
     box-sizing: border-box;
 }
 
 #answers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100vw;
     gap: 10px;
     padding: 10px;
     box-sizing: border-box;
@@ -56,10 +56,10 @@ body {
 }
 
 .answer {
-    background-color: #f0f0f0; /* Light background color */
-    border: 2px solid #ddd; /* Solid border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     color: white;
     font-weight: bold;
@@ -71,12 +71,12 @@ body {
     box-sizing: border-box;
     text-align: center;
     text-shadow: 1px 1px 2px black;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for interaction */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .answer:hover, .answer:focus {
-    transform: scale(1.05); /* Slightly scale up on hover/focus */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover/focus */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #answer1 { background-color: red; }
@@ -89,17 +89,22 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px 0;
-    width: calc(100vw - 20px);
-    max-width: 500px; /* Maximum width to match #answers */
+    width: calc(100vw - 40px); /* Adjusted for consistent right padding */
+    max-width: 500px;
 }
 
 #stars span {
-    font-size: 3vw; /* Smaller font size to accommodate up to 10 stars */
+    font-size: 3vw;
     margin: 0 1px;
 }
 
 @media only screen and (max-width: 600px) {
+    #header-container, #quiz-container {
+        max-width: calc(100vw - 20px);
+        padding: 10px;
+    }
+
     #stars span {
-        font-size: 6vw; /* Adjusted for smaller screens */
+        font-size: 6vw;
     }
 }
