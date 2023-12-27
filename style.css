@@ -19,12 +19,12 @@ body {
 #question {
     font-size: 6vw; /* Increased font size for question */
     font-weight: bold;
-    color: black; /* Optional: change if needed */
+    color: black;
 }
 
 #score {
     font-size: 5vw; /* Increased font size for score */
-    color: black; /* Optional: change if needed */
+    color: black;
 }
 
 #answers {
@@ -34,6 +34,7 @@ body {
     gap: 10px;
     padding: 10px;
     box-sizing: border-box;
+    position: relative; /* Set relative positioning for feedback */
 }
 
 .answer {
@@ -46,10 +47,10 @@ body {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
-    font-size: 5vw; /* Increased font size for answers */
+    font-size: 5vw; /* Responsive font size */
     box-sizing: border-box;
     text-align: center;
-    text-shadow: 1px 1px 2px black; /* Adding text shadow for readability */
+    text-shadow: 1px 1px 2px black; /* Text shadow for readability */
 }
 
 #answer1 { background-color: red; }
@@ -57,6 +58,30 @@ body {
 #answer3 { background-color: green; }
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
+.feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48vw;
+    height: 48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    background-color: green; /* Default background */
+}
+
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+
 @media only screen and (max-width: 600px) {
-    #question, #score, .answer { font-size: 8vw; } /* Larger text for smaller screens */
+    #question, #score, .answer { font-size: 8vw; }
+    .feedback {
+        width: 96vw;
+        height: 48vw;
+    }
 }
