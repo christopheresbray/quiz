@@ -28,23 +28,25 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates two columns */
     gap: 10px; /* Adjust as needed for spacing */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .answer {
-    padding: 10px;
+    background-color: #f0f0f0; /* Example background color */
     border: 1px solid #ddd;
     cursor: pointer;
-    color: white;
+    color: black;
     font-weight: bold;
-    text-align: center;
-    min-height: 50px; /* Adjust as needed for consistent height */
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio for square shape */
+    padding: 5%; /* Adjust for content spacing */
+    box-sizing: border-box;
 }
 
-/* Continue with your existing styles for #answer1, #answer2, etc. */
-
+/* Specific styles for each answer box for color differentiation */
 #answer1 {
     background-color: red;
 }
@@ -59,8 +61,23 @@ body {
 
 #answer4 {
     background-color: yellow;
-    color: black; /* Better contrast for readability */
+    color: black; /* For better contrast */
 }
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens like iPhones */
+    #answers {
+        grid-template-columns: 1fr; /* Stack answers in one column on small screens */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Adjustments for larger screens like iPads */
+    #answers {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+    }
+}
+
 
 .inactive {
     background-color: grey !important;
