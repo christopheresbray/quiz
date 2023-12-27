@@ -54,19 +54,22 @@ body {
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
 #stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    gap: 2px;
+    width: calc(100vw - 20px); /* Width of #answers minus padding */
+    margin: 10px auto;
+    max-width: 500px; /* Maximum width to match #answers */
 }
 
 #stars span {
-    font-size: 8vw; /* Adjusted font size */
-    margin: 0 2px;
+    font-size: calc(5vw - 1px); /* Adjusted to match the size of answer boxes */
+    line-height: 1;
 }
 
 @media only screen and (max-width: 600px) {
     #stars span {
-        font-size: 16vw; /* Adjusted for smaller screens */
+        font-size: calc(10vw - 2px); /* Adjusted for smaller screens */
     }
 }
