@@ -72,3 +72,15 @@ body {
         font-size: 6vw; /* Adjusted for smaller screens */
     }
 }
+
+#image-container {
+    text-align: center;
+    max-width: 500px; /* Match the max width of your quiz container */
+    margin: 0 auto; /* Center the container */
+}
+
+#image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1024px; /* Maximum width of the image */
+}
