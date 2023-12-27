@@ -67,12 +67,14 @@ body {
 }
 
 #answers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100px; /* Adjust as necessary */
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .answer {
@@ -83,10 +85,11 @@ body {
     cursor: pointer;
     color: white;
     font-weight: bold;
+    display: flex;
     justify-content: center;
     align-items: center; /* Vertically center content */
-    width: calc(50% - 12px); /* Adjust width for 2 columns layout */
-    height: 0; /* Set initial height to 0 */
+    width: calc((100vw - 30px)/2); /* Adjust width for 2 columns layout */
+    height: calc((100vw - 30px)/2); * Set initial height to 0 */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
