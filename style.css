@@ -54,22 +54,21 @@ body {
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
 #stars {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    justify-items: center;
-    gap: 2px;
-    width: calc(100vw - 20px); /* Width of #answers minus padding */
-    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: calc(100vw - 20px);
     max-width: 500px; /* Maximum width to match #answers */
 }
 
 #stars span {
-    font-size: calc(5vw - 1px); /* Adjusted to match the size of answer boxes */
-    line-height: 1;
+    font-size: 3vw; /* Smaller font size to accommodate up to 10 stars */
+    margin: 0 1px;
 }
 
 @media only screen and (max-width: 600px) {
     #stars span {
-        font-size: calc(10vw - 2px); /* Adjusted for smaller screens */
+        font-size: 6vw; /* Adjusted for smaller screens */
     }
 }
