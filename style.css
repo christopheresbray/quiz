@@ -87,7 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     width: calc(50% - 12px); /* Adjust width for 2 columns layout */
-    height: width; /* Fixed height */
+    height: 0; /* Set initial height to 0 */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
@@ -96,6 +96,7 @@ body {
     text-overflow: ellipsis; /* Add ellipsis to overflowed text */
     white-space: nowrap; /* Prevent text wrapping */
     font-size: 5vw; /* Adjust font size for responsive text */
+    padding-top: 100%; /* Set padding-top to create square aspect ratio */
 }
 
 #answer1 { background-color: red; }
