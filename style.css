@@ -112,7 +112,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    margin: 0 auto 20px auto; /* Align margins with #answers */
+    margin: 10px auto; /* Match vertical gap with grid gap */
     max-width: calc(500px - 20px); /* Adjust width to account for padding */
 }
 
@@ -120,6 +120,7 @@ body {
     font-size: 3vw;
     margin: 0 1px;
 }
+
 
 @media only screen and (max-width: 600px) {
     #answers, #stars {
