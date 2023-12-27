@@ -83,9 +83,9 @@ body {
     cursor: pointer;
     color: white;
     font-weight: bold;
-    display: flex;
+    display: flex; /* Use flexbox for vertical centering */
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Vertically center content */
     width: calc(50% - 12px); /* Adjust width for 2 columns layout */
     height: 0; /* Set initial height to 0 */
     padding: 10px; /* Inner padding */
@@ -97,7 +97,8 @@ body {
     white-space: nowrap; /* Prevent text wrapping */
     font-size: 5vw; /* Adjust font size for responsive text */
     padding-top: 100%; /* Set padding-top to create square aspect ratio */
-}
+    line-height: 1.2; /* Adjust line-height for vertical centering */
+}}
 
 #answer1 { background-color: red; }
 #answer2 { background-color: blue; }
