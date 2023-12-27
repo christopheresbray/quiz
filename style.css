@@ -24,14 +24,26 @@ body {
     font-size: 16px;
 }
 
+#answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    gap: 10px; /* Adjust as needed for spacing */
+}
+
 .answer {
     padding: 10px;
-    margin: 10px;
     border: 1px solid #ddd;
     cursor: pointer;
     color: white;
     font-weight: bold;
+    text-align: center;
+    min-height: 50px; /* Adjust as needed for consistent height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Continue with your existing styles for #answer1, #answer2, etc. */
 
 #answer1 {
     background-color: red;
