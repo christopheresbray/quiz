@@ -70,9 +70,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
+    margin: 0 auto; /* Centering the grid */
+    max-width: 500px; /* Set a max width for the answer grid */
 }
 
 .answer {
@@ -108,9 +107,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;
-    width: calc(100vw - 40px); /* Adjusted for consistent right padding */
-    max-width: 500px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 auto 20px auto; /* Align margins with #answers */
+    max-width: calc(500px - 20px); /* Adjust width to account for padding */
 }
 
 #stars span {
@@ -119,15 +122,9 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    /* Adjustments for smaller screens */
-    #question-header, #stars {
+    #answers, #stars {
+        max-width: calc(100vw - 20px);
         margin: 10px;
-        padding: 10px;
-        box-shadow: none; /* Optional: remove shadow on smaller screens */
-    }
-    
-    #question {
-        font-size: 5vw;
     }
 
     #stars span {
