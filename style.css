@@ -85,3 +85,11 @@ body {
         height: 48vw;
     }
 }
+#stars {
+    font-size: 24px; /* Adjust size as needed */
+    margin: 10px 0;
+}
+
+#stars span {
+    margin-right: 5px;
+}
