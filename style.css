@@ -87,7 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     width: calc(50% - 12px); /* Adjust width for 2 columns layout */
-    height: 100px; /* Fixed height */
+    height: width; /* Fixed height */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
