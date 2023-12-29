@@ -95,13 +95,19 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100vw - 60px); /* Same as question box */
-    height: 50px; /* initial height for larger screens */
+    height: 50px; /* Adjust for larger screens */
     margin: 38px auto 20px; /* Increased top margin */    padding: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#score-container img {
+    width: calc((100% - 20px) / 10); /* Adjust width to fit exactly 10 coins */
+    height: auto; /* Maintain aspect ratio */
+}
+
 #answer1 { background-color: red; }
 #answer2 { background-color: blue; }
 #answer3 { background-color: green; }
@@ -112,8 +118,8 @@ body {
         height: 60px; 
     }
 
-    #score-container img {
-        width: 1%; /* down from 90?? */
+ #score-container img {
+        width: calc((100% - 20px) / 10); /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
     }
 }
