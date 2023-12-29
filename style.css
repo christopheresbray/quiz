@@ -95,7 +95,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100vw - 60px); /* Same as question box */
-    height: 50px; /* Adjust based on coin image height */
+    height: 50px; /* initial height for larger screens */
     margin: 38px auto 20px; /* Increased top margin */    padding: 5px;
     box-sizing: border-box;
     display: flex;
@@ -108,8 +108,12 @@ body {
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
 @media only screen and (max-width: 600px) {
-    #answers {
-        max-width: calc(100vw - 20px);
-        margin: 10px;
+    #score-container {
+        height: 60px; /* Slightly larger height for smaller screens */
+    }
+
+    #score-container img {
+        width: 90%; /* Reduce width of each coin on smaller screens */
+        height: auto; /* Maintain aspect ratio */
     }
 }
