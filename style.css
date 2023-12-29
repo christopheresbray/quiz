@@ -77,8 +77,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertically center content */
-    width: calc((100vw - 70px)/2); /* Adjusted width */
-    height: calc((100vw - 70px)/2); /* Adjusted height */
+    width: calc((100vw - 80px)/2); /* Adjusted width */
+    height: calc((100vw - 80px)/2); /* Adjusted height */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
