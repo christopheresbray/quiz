@@ -6,11 +6,9 @@ body {
 }
 
 #header-container {
-    align-items: center;
-    justify-content: flex-start;
-    max-width: calc(100vw - 20px); /* Reduced overall width to account for padding */
-    margin: 0 auto; /* Centered horizontally */
-    padding: 10px; /* Added padding around the container */
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -25,9 +23,9 @@ body {
 }
 
 #question-container {
-    max-width: calc(100vw - 40px); /* Adjust width for consistent padding */
-    margin: auto;
-    padding: 20px; /* Additional padding on the right */
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -37,11 +35,10 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    text-align: center;
-    height: 300px; /* Fixed height */
-    width: calc(90vw - 40px); /* Adjusted to match the quiz container width */
-    margin: 0 auto 20px; /* Centering and bottom margin */
-    box-sizing: border-box; /* Include padding and border in the width */
+    height: 300px;
+    width: calc(100vw - 60px); /* Adjusted width */
+    margin: 0 auto 20px;
+    box-sizing: border-box;
 }
 
 #question {
@@ -53,24 +50,10 @@ body {
     white-space: nowrap;
 }
 
-#stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9; /* Light background color */
-    border: 5px solid #ddd;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 10px; /* Inner spacing */
-    width: calc(100vw - 40px); /* Adjusted for consistent right padding */
-    max-width: 500px; /* Maximum width to match #answers */
-    margin: 0 auto 20px; /* Centering and spacing at the bottom */
-}
-
 #quiz-container {
-    max-width: 90vw; /* Adjusted width for consistent padding */
-    margin: auto;
-    padding: 20px; /* Additional padding on the right */
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -78,11 +61,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 10px;
+    width: calc(100vw - 60px); /* Adjusted width */
+    margin: 0 auto;
     box-sizing: border-box;
-    width: 90vw;
-    justify-content: center;
-    align-items: center;
 }
 
 .answer {
@@ -96,8 +77,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertically center content */
-    width: calc((100vw - 30px)/2); /* Adjust width for 2 columns layout */
-    height: calc((100vw - 30px)/2); * Set initial height to 0 */
+    width: calc((100vw - 70px)/2); /* Adjusted width */
+    height: calc((100vw - 70px)/2); /* Adjusted height */
     padding: 10px; /* Inner padding */
     box-sizing: border-box;
     text-align: center;
@@ -123,9 +104,9 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    margin: 10px auto; /* Match vertical gap with grid gap */
-    max-width: calc(500px - 20px); /* Adjust width to account for padding */
-}
+    width: calc(100vw - 60px); /* Adjusted width */
+    margin: 10px auto;
+    max-width: calc(500px - 20px);}
 
 #stars span {
     font-size: 3vw;
@@ -133,7 +114,7 @@ body {
 }
 
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 600px) {
     #answers, #stars {
         max-width: calc(100vw - 20px);
         margin: 10px;
