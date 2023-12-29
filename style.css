@@ -22,6 +22,21 @@ body {
     height: 150px;
 }
 
+/* New Styles for End-Game Image */
+#end-game-container #image-container {
+    width: 450px; /* Increased size */
+    height: 450px; /* Increased size */
+    margin: 0 auto; /* Center the image */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#end-game-container #image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 #question-container {
     max-width: calc(100vw - 40px);
     margin: 0 auto;
