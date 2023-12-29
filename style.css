@@ -118,11 +118,15 @@ body {
     padding: 20px;
 }
 
-#congrats-message {
-    font-size: 48px;
+#congrats-message-line1 {
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
+#congrats-message-line2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
 #play-again-button {
     padding: 10px 20px;
     font-size: 48px;
