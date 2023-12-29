@@ -59,15 +59,14 @@ function updateScore() {
     let scoreContainer = document.getElementById("score-container");
     scoreContainer.innerHTML = ""; // Clear previous score display
 
-    let coinSize = (scoreContainer.offsetWidth / 10) - 5; // Slightly reduce size for padding
+    let coinSize = Math.min(scoreContainer.offsetHeight, scoreContainer.offsetWidth / 10 - 5);
 
     // Display 10 coins: grey for not scored, gold for scored
     for (let i = 0; i < 10; i++) {
         let coinImg = document.createElement("img");
-        coinImg.style.width = coinSize + 'px'; // Set coin size
+        coinImg.style.width = coinSize + 'px';
         coinImg.style.height = 'auto'; // Maintain aspect ratio
-
-        coinImg.src = i < currentScore ? "coin.png" : "greycoin.png"; // Gold or grey coin
+        coinImg.src = i < currentScore ? "coin.png" : "greycoin.png";
         coinImg.alt = "Coin";
         scoreContainer.appendChild(coinImg);
     }
