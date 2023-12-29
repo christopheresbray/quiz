@@ -66,4 +66,17 @@ function updateStars() {
     }
 }
 
+function updateScore() {
+    let scoreContainer = document.getElementById("score-container");
+    scoreContainer.innerHTML = ""; // Clear previous score
+
+    for (let i = 0; i < currentScore; i++) {
+        let coinImg = document.createElement("img");
+        coinImg.src = "coin.png"; // Path to your coin image
+        coinImg.alt = "Coin";
+        coinImg.style.width = '50px'; // Set width as needed
+        coinImg.style.height = '50px'; // Set height as needed
+        scoreContainer.appendChild(coinImg);
+    }
+}
 window.onload = displayQuestion;
