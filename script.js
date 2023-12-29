@@ -57,15 +57,33 @@ function selectAnswer(index) {
 
 function updateScore() {
     let scoreContainer = document.getElementById("score-container");
-    scoreContainer.innerHTML = ""; // Clear previous score display
+    scoreContainer.innerHTML = ""; 
 
-   // Display 10 coins: grey for not scored, gold for scored
     for (let i = 0; i < 10; i++) {
         let coinImg = document.createElement("img");
         coinImg.src = i < currentScore ? "coin.png" : "greycoin.png";
         coinImg.alt = "Coin";
         scoreContainer.appendChild(coinImg);
     }
+
+    if (currentScore >= 10) {
+        endGame();
+    }
 }
+
+function endGame() {
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("end-game-container").style.display = "block";
+}
+
+document.getElementById("play-again-button").addEventListener("click", function() {
+    document.getElementById("quiz-container").style.display = "block";
+    document.getElementById("end-game-container").style.display = "none";
+    currentScore = 0;
+    currentQuestionIndex = 0;
+    shuffleArray(questions);
+    displayQuestion();
+    updateScore();
+});
 
 window.onload = displayQuestion;
