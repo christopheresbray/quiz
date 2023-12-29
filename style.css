@@ -95,32 +95,9 @@ body {
 #answer3 { background-color: green; }
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
-#stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 2px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: calc(100vw - 60px); /* Adjusted width */
-    margin: 10px auto;
-    max-width: calc(500px - 20px);}
-
-#stars span {
-    font-size: 3vw;
-    margin: 0 1px;
-}
-
-
 @media only screen and (max-width: 600px) {
-    #answers, #stars {
+    #answers {
         max-width: calc(100vw - 20px);
         margin: 10px;
-    }
-
-    #stars span {
-        font-size: 6vw;
     }
 }
