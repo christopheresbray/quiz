@@ -59,8 +59,6 @@ function updateScore() {
     let scoreContainer = document.getElementById("score-container");
     scoreContainer.innerHTML = ""; // Clear previous score display
 
-    let coinSize = Math.min(scoreContainer.offsetHeight, scoreContainer.offsetWidth / 10 - 5);
-
    // Display 10 coins: grey for not scored, gold for scored
     for (let i = 0; i < 10; i++) {
         let coinImg = document.createElement("img");
