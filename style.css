@@ -126,12 +126,12 @@ body {
 
 #congrats-message-line2 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     font-weight: bold;
 }
 #play-again-button {
-    padding: 10px 20px;
-    font-size: 48px;
+    padding: 20px 40px;
+    font-size: 60px;
     cursor: pointer;
 }
 
