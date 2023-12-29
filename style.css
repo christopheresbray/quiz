@@ -96,8 +96,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100vw - 60px); /* Same as question box */
     height: 50px; /* Adjust based on coin image height */
-    margin: 20px auto;
-    padding: 5px;
+    margin: 33px auto 20px; /* Increased top margin */    padding: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
