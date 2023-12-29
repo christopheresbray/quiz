@@ -93,6 +93,7 @@ function endGame() {
     document.getElementById("question-container").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("score-container").style.display = "none";
+    document.getElementById("image-container").classList.add("end-game-image"); // Add class for styling
     document.getElementById("end-game-container").style.display = "block";
 }
 
@@ -101,6 +102,7 @@ document.getElementById("play-again-button").addEventListener("click", function(
     document.getElementById("question-container").style.display = "block";
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("score-container").style.display = "block";
+    document.getElementById("image-container").classList.remove("end-game-image"); // Remove class
     document.getElementById("end-game-container").style.display = "none";
     currentScore = 0;
     currentQuestionIndex = 0;
