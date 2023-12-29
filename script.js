@@ -91,3 +91,4 @@ window.onload = function() {
     displayQuestion();      // Display the first question
     updateScore();          // Update the score display
 };
+ 
