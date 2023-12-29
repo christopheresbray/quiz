@@ -109,11 +109,11 @@ body {
 
 @media only screen and (max-width: 600px) {
     #score-container {
-        height: 100px; /* If not working change back to 60 */
+        height: 60px; 
     }
 
     #score-container img {
-        width: 90%; /* Reduce width of each coin on smaller screens */
+        width: 10%; /* down from 90?? */
         height: auto; /* Maintain aspect ratio */
     }
 }
