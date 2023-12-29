@@ -61,11 +61,9 @@ function updateScore() {
 
     let coinSize = Math.min(scoreContainer.offsetHeight, scoreContainer.offsetWidth / 10 - 5);
 
-    // Display 10 coins: grey for not scored, gold for scored
+   // Display 10 coins: grey for not scored, gold for scored
     for (let i = 0; i < 10; i++) {
         let coinImg = document.createElement("img");
-        coinImg.style.width = coinSize + 'px';
-        coinImg.style.height = 'auto'; // Maintain aspect ratio
         coinImg.src = i < currentScore ? "coin.png" : "greycoin.png";
         coinImg.alt = "Coin";
         scoreContainer.appendChild(coinImg);
