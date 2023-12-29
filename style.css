@@ -25,28 +25,32 @@ body {
 }
 
 #question-container {
-    max-width: calc(100vw - 40px); /* Adjusted width for consistent padding */
+    max-width: calc(100vw - 40px); /* Adjust width for consistent padding */
     margin: auto;
     padding: 20px; /* Additional padding on the right */
     box-sizing: border-box;
 }
 
 #question-header {
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #f9f9f9;
     border: 2px solid #ddd;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 15px; /* Inner spacing */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
-    height: 300px;
-    width: 100vw;
-    margin-bottom: 20px; /* Space below the question box */
+    height: 300px; /* Fixed height */
+    width: calc(90vw - 40px); /* Adjusted to match the quiz container width */
+    margin: 0 auto 20px; /* Centering and bottom margin */
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
 #question {
     font-size: 6vw;
     font-weight: bold;
     color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #stars {
