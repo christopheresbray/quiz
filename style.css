@@ -36,7 +36,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     height: 300px;
-    width: calc(100vw - 60px); /* Match the width of the answers container */
+    width: calc(100vw - 70px); /* Adjusted width to account for grid gap - up from 60*/
     margin: 0 auto 20px; /* Center the box */    box-sizing: border-box;
     white-space: normal; /* Allows text wrapping */
     overflow: visible; /* Lets text extend beyond the box if needed */
