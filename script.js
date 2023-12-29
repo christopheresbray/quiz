@@ -47,13 +47,9 @@ function displayQuestion() {
 
 function selectAnswer(index) {
     if (index === questions[currentQuestionIndex].correct) {
-        if (currentScore < totalQuestions) {
-            currentScore++;
-        }
+        currentScore = Math.min(currentScore + 1, 10); // Ensure score does not exceed 10
     } else {
-        if (currentScore > 0) {
-            currentScore--;
-        }
+        currentScore = Math.max(currentScore - 1, 0); // Ensure score does not fall below 0
     }
     currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
     displayQuestion();
