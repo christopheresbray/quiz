@@ -45,9 +45,6 @@ body {
     font-size: 6vw;
     font-weight: bold;
     color: black;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 #quiz-container {
