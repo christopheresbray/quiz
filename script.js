@@ -42,7 +42,6 @@ function displayQuestion() {
     question.answers.forEach((answer, index) => {
         document.getElementById("answer" + (index + 1)).innerText = answer;
     });
-    updateStars();
     updateScore();
 }
 
@@ -54,17 +53,6 @@ function selectAnswer(index) {
     }
     currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
     displayQuestion();
-}
-
-function updateStars() {
-    let starContainer = document.getElementById("stars");
-    starContainer.innerHTML = ""; // Clear previous stars
-
-    for (let i = 0; i < 10; i++) {
-        let star = document.createElement("span");
-        star.textContent = i < currentScore ? "⭐" : "☆"; // Filled star for correct answers, empty for remaining
-        starContainer.appendChild(star);
-    }
 }
 
 function updateScore() {
