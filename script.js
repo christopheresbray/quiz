@@ -36,13 +36,20 @@ let currentScore = 0;
 // Shuffle questions at the start
 shuffleArray(questions);
 
+document.addEventListener('DOMContentLoaded', function() {
+    shuffleArray(questions);
+    displayQuestion();
+    updateScore();
+    console.log('Quiz initialized'); // Debugging line
+});
+
 function displayQuestion() {
     let question = questions[currentQuestionIndex];
     document.getElementById("question").innerText = question.question;
     question.answers.forEach((answer, index) => {
         document.getElementById("answer" + (index + 1)).innerText = answer;
     });
-    updateScore();
+    console.log('Question displayed'); // Debugging line
 }
 
 function selectAnswer(index) {
