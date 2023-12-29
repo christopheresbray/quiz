@@ -39,6 +39,9 @@ body {
     width: calc(100vw - 60px); /* Adjusted width */
     margin: 0 auto 20px;
     box-sizing: border-box;
+    white-space: normal; /* Allows text wrapping */
+    overflow: visible; /* Lets text extend beyond the box if needed */
+    text-overflow: clip; /* Default behavior, allowing text to wrap */
 }
 
 #question {
