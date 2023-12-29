@@ -88,6 +88,7 @@ function endGame() {
 }
 
 document.getElementById("play-again-button").addEventListener("click", function() {
+    document.getElementById("image-container").style.height = "150px";
     document.getElementById("question-container").style.display = "block";
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("score-container").style.display = "block";
