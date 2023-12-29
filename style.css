@@ -109,7 +109,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     #score-container {
-        height: 60px; /* Slightly larger height for smaller screens */
+        height: 100px; /* If not working change back to 60 */
     }
 
     #score-container img {
