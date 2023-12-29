@@ -86,4 +86,8 @@ document.getElementById("play-again-button").addEventListener("click", function(
     updateScore();
 });
 
-window.onload = displayQuestion;
+window.onload = function() {
+    shuffleArray(questions); // Shuffle the questions
+    displayQuestion();      // Display the first question
+    updateScore();          // Update the score display
+};
