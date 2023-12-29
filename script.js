@@ -92,10 +92,4 @@ document.getElementById("play-again-button").addEventListener("click", function(
     displayQuestion();
     updateScore();
 });
-
-window.onload = function() {
-    shuffleArray(questions); // Shuffle the questions
-    displayQuestion();      // Display the first question
-    updateScore();          // Update the score display
-};
  
