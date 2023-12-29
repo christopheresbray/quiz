@@ -113,7 +113,7 @@ body {
     }
 
     #score-container img {
-        width: 10%; /* down from 90?? */
+        width: 1%; /* down from 90?? */
         height: auto; /* Maintain aspect ratio */
     }
 }
