@@ -80,6 +80,7 @@ function updateScore() {
 }
 
 function endGame() {
+    document.getElementById("image-container").style.height = "300px";
     document.getElementById("question-container").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("score-container").style.display = "none";
