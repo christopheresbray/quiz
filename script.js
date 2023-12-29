@@ -43,6 +43,7 @@ function displayQuestion() {
         document.getElementById("answer" + (index + 1)).innerText = answer;
     });
     updateStars();
+    updateScore();
 }
 
 function selectAnswer(index) {
