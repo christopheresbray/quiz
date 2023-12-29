@@ -54,12 +54,13 @@ function displayQuestion() {
 
 function selectAnswer(index) {
     if (index === questions[currentQuestionIndex].correct) {
-        currentScore = Math.min(currentScore + 1, 10); // Ensure score does not exceed 10
+        currentScore = Math.min(currentScore + 1, 10); // Increase score, max 10
     } else {
-        currentScore = Math.max(currentScore - 1, 0); // Ensure score does not fall below 0
+        currentScore = Math.max(currentScore - 1, 0); // Decrease score, min 0
     }
     currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-    displayQuestion();
+    displayQuestion(); // Display next question
+    updateScore();     // Update the score display
 }
 
 function updateScore() {
