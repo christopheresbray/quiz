@@ -36,9 +36,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     height: 300px;
-    width: calc(100vw - 80px); /* Adjust width to account for grid gap in answers */    
-    margin: 0 auto 20px;
-    box-sizing: border-box;
+    width: calc(100vw - 60px); /* Match the width of the answers container */
+    margin: 0 auto 20px; /* Center the box */    box-sizing: border-box;
     white-space: normal; /* Allows text wrapping */
     overflow: visible; /* Lets text extend beyond the box if needed */
     text-overflow: clip; /* Default behavior, allowing text to wrap */
@@ -61,8 +60,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    width: calc(100vw - 60px); 
-    margin: 0 auto;
+    width: calc(100vw - 60px); /* This width should match the question-header width */
+    margin: 0 auto; /* Center the grid */    
     box-sizing: border-box;
 }
 
