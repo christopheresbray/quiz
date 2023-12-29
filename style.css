@@ -95,7 +95,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100vw - 60px); /* Same as question box */
-    height: 50px; /* Adjust for larger screens */
+    height: 100px; 
     margin: 38px auto 20px; /* Increased top margin */    padding: 5px;
     box-sizing: border-box;
     display: flex;
@@ -115,7 +115,7 @@ body {
 
 @media only screen and (max-width: 768px) { /* Targeting more general mobile devices */
     #score-container {
-        height: 60px; /* Adjust for smaller screens */
+        height: 100px; /* Adjust for smaller screens */
     }
 
     #score-container img {
