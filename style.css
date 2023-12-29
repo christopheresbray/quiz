@@ -89,6 +89,20 @@ body {
     line-height: 1.2; /* Adjust line-height for vertical centering */
 }
 
+#score-container {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(100vw - 60px); /* Same as question box */
+    height: 50px; /* Adjust based on coin image height */
+    margin: 20px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #answer1 { background-color: red; }
 #answer2 { background-color: blue; }
 #answer3 { background-color: green; }
