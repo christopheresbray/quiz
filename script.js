@@ -1,3 +1,11 @@
+function preloadImages() {
+    var images = ["coin.png", "greycoin.png"]; // Add paths to all images you want to preload
+    images.forEach(function(image) {
+        var img = new Image();
+        img.src = image;
+    });
+}
+
 let questions = [
     { question: "What is money used for?", answers: ["Playing games", "Buying things", "Sleeping", "Drawing"], correct: 1 },
     { question: "What do you call money someone earns from going to work?", answers: ["Salary", "Pocket Money", "Interest", "Donation"], correct: 0 },
@@ -37,6 +45,7 @@ let currentScore = 0;
 shuffleArray(questions);
 
 document.addEventListener('DOMContentLoaded', function() {
+    preloadImages();
     shuffleArray(questions);
     displayQuestion();
     updateScore();
