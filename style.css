@@ -113,13 +113,19 @@ body {
 #answer3 { background-color: green; }
 #answer4 { background-color: yellow; color: black; text-shadow: 1px 1px 2px white; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) { /* Targeting more general mobile devices */
     #score-container {
-        height: 60px; 
+        height: 60px; /* Adjust for smaller screens */
     }
 
- #score-container img {
+    #score-container img {
         width: calc((100% - 20px) / 10); /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
     }
+}
+
+/* Additional specific targeting for iPhone X and later */
+
+@media only screen and (max-width: 375px) {
+    /* Add any specific styles for smaller iPhones here if needed */
 }
